@@ -37,4 +37,5 @@ textarea{
 	color: #222;
 	border: 1px solid #CCC;
 	font-family: sans-serif;
+	font-size: 12px;
 	
