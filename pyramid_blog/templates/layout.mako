@@ -5,7 +5,8 @@
 <title>Pyramid Blog</title>
 	<meta name="keywords" content="python web application" />
 	<meta name="description" content="pyramid web application" />
-	<link rel="shortcut icon" href="${request.static_url(pyramid_blog:static/favicon.ico')}" />
+	<link rel="shortcut icon" href="${request.static_url('pyramid_blog:static/favicon.ico')}" />
+	<link rel="stylesheet" href="${request.static_url('pyramid_blog:static/pylons:css')}" media="screen" charset="utf-8" />
 	<link rel="stylesheet" href="http://static.pylonsproject.org/fonts/nobile/stylesheet.css" media="screen" />
 	<link rel="stylesheet" href="http://static.pylonsproject.org/fonts/neuton/stylesheet.css" media="screen" />
 	<!--[if lte IE 6]>

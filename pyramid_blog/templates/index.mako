@@ -1,4 +1,18 @@
 <%inherit file="pyramid_blog:templates/layout.mako"/>
+<%
+from pyramid.security import authenticated_userid
+user_id = authenticated_userid(request)
+%>
+% if user_id:
+	Welcome <strong>${user_id}</strong> ::
+	<a href="${request.route_url('auth', action='in')}">Sign Out</a>
+%else:
+	<form action="${request.route_url('auth', action='in')}" method="post">
+	<label>User</label><input type="text" name="username">
+	<label>Password</label><input type="text" name="username">
+	<input type="submit" value="sign in">
+	</form>
+%endif
 
 % if paginator.items:
 

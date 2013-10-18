@@ -32,10 +32,18 @@ label{
 	}
 input[type=text]{
 	min-width: 50px;
-	}
+}
 textarea{
 	color: #222;
 	border: 1px solid #CCC;
 	font-family: sans-serif;
 	font-size: 12px;
-	
+	line-height: 16px;
+	min-width: 505px;
+	min-height: 100px;
+}
+.error{
+	font-weight:bold;
+	color: red;
+}
+</style>

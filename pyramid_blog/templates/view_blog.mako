@@ -9,6 +9,6 @@ ${entry.created_in_words}</strong> ago </p>
 
 <p><a href="${request.route_url('home')}">Go back</a> ::
 <a href="${request.route_url('blog_action', action='edit',
-_query=(('id',entry.if),))}">Edit Entry</a>
+_query=(('id',entry.id),))}">Edit Entry</a>
 
 </p>
