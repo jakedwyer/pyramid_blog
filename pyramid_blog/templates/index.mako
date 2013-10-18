@@ -5,7 +5,7 @@ user_id = authenticated_userid(request)
 %>
 % if user_id:
 	Welcome <strong>${user_id}</strong> ::
-	<a href="${request.route_url('auth', action='in')}">Sign Out</a>
+	<a href="${request.route_url('auth', action='out')}">Sign Out</a>
 %else:
 	<form action="${request.route_url('auth', action='in')}" method="post">
 	<label>User</label><input type="text" name="username">

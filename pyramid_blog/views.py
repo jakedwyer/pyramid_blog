@@ -58,17 +58,17 @@ def blog_update(request):
 
 	
 @view_config(route_name='auth', match_param='action=in', renderer='string',
-			request_method='POST')
+             request_method='POST')
 @view_config(route_name='auth', match_param='action=out', renderer='string')
 def sign_in_out(request):
-	username = request.POST.get('username')
-	if username:
-		user = User.by_name(username)
-		if user and user.verify_password(request.POST.get('password')):
-			headers = remember(request, user.name)
-		else:
-			headers = forget(request)
-	else:
-		headers = forget(request)
-	return HTTPFound(location=request.route_url('home'),
-					headers=headers)
+    username = request.POST.get('username')
+    if username:
+        user = User.by_name(username)
+        if user and user.verify_password(request.POST.get('password')):
+            headers = remember(request, user.name)
+        else:
+            headers = forget(request)
+    else:
+        headers = forget(request)
+    return HTTPFound(location=request.route_url('home'),
+                     headers=headers)
